@@ -14,7 +14,7 @@ app.use(
 
 app.use(express.json())
 
-// rotas
+// routes
 const personRoutes = require('./routes/personRoutes')
 
 app.use('/person', personRoutes)
