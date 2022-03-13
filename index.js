@@ -27,13 +27,12 @@ app.get('/', (req, res) => {
 })
 
 
-const DB_USER = process.env.DB_USER
-const DB_PASSWORD = process.env.DB_PASSWORD
 
+const MONGO_URL = process.env.MONGO_URL
 
 mongoose
     .connect(
-        `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster0.ylhuk.mongodb.net/apidatabase?retryWrites=true&w=majority`,
+        MONGO_URL,
     )
     .then(() => {
         console.log('conected in mongo')
